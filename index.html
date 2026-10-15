@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sai ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#090909;
+  color:#f7f7f7;
+  overflow-x:hidden
+}
+
+section{
+  min-height:100vh;
+  padding:28px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center
+}
+
+.glow{
+  color:#ff4d6d;
+  text-shadow:0 0 10px #ff4d6d,0 0 25px #ff4d6d
+}
+
+h1{font-size:clamp(2.5rem,8vw,5.5rem);margin:10px 0}
+h2{font-size:clamp(1.8rem,5vw,3rem)}
+
+p{
+  font-size:1.08rem;
+  line-height:1.8;
+  max-width:650px;
+  color:#ddd
+}
+
+button{
+  margin:12px;
+  padding:13px 25px;
+  border:0;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:0 0 18px rgba(255,77,109,.3);
+  transition:.25s
+}
+
+button:hover{transform:scale(1.06)}
+
+.secondary{
+  background:#222;
+  border:1px solid #ff4d6d
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(35px);
+  transition:1s
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0)
+}
+
+.card{
+  max-width:700px;
+  padding:32px;
+  border:1px solid #292929;
+  border-radius:25px;
+  background:rgba(255,255,255,.045);
+  box-shadow:0 0 40px rgba(255,77,109,.08)
+}
+
+.big-heart{
+  font-size:80px;
+  animation:pulse 1.5s infinite
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.12)}
+}
+
+#finalMessage,#reply{
+  display:none;
+  margin-top:25px;
+  font-size:1.1rem;
+  line-height:1.8;
+  max-width:650px
+}
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  z-index:5;
+  pointer-events:none;
+  animation:floatUp 6s linear forwards
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0) rotate(0);opacity:.9}
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+small{color:#777}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1: INTRODUCTION -->
+<section>
+  <div class="big-heart">🥺❤️</div>
+  <h1 class="glow">I'm Sorry, Sai</h1>
+  <p id="typing"></p>
+  <button onclick="nextSection()">I have something to say →</button>
+</section>
+
+<!-- SECTION 2: APOLOGY -->
+<section class="fade">
+  <div class="card">
+    <h2>Sai… 🥺❤️</h2>
+
+    <p>
+      I'm really sorry if I ever made you feel forced
+      or uncomfortable. I never wanted to hurt you
+      or make you feel pressured.
+    </p>
+
+    <p>
+      Sometimes my emotions take over, and I end up
+      doing things I shouldn't. I know that's not fair
+      to you, and I'm genuinely sorry for that.
+    </p>
+
+    <p class="glow">
+      You never deserved to feel uncomfortable because of me. ❤️
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 3: OUR FRIENDSHIP -->
+<section class="fade">
+  <h2 class="glow">I Miss My Best Friend 🫶</h2>
+
+  <p>
+    Sai, I just have one request. Please don't feel
+    like you have to change who you are because of me.
+    I miss the same Sai who was my best friend,
+    my close friend, and someone I could share
+    everything with.
+  </p>
+
+  <p>
+    I don't want to lose the beautiful bond we have.
+    Our friendship means so much more to me than
+    my emotions or expectations.
+  </p>
+
+  <p>
+    I just miss us being comfortable, happy,
+    and our usual selves around each other. ❤️
+  </p>
+</section>
+
+<!-- SECTION 4: MY PROMISE -->
+<section class="fade">
+  <div class="card">
+    <h2>My Promise to You 🤍</h2>
+
+    <p>
+      I will work on myself and my emotions.<br><br>
+
+      I will learn to manage my expectations.<br><br>
+
+      I will respect your feelings, your space,
+      and your boundaries.<br><br>
+
+      I will try to understand you instead of
+      letting my emotions take over.<br><br>
+
+      And most importantly, I want you to feel
+      happy, comfortable, and free to be yourself
+      whenever you're with me.
+    </p>
+
+    <p class="glow">
+      I want to become a better friend to you. ❤️
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 5: FROM MY HEART -->
+<section class="fade">
+  <h2>One Last Thing… 💌</h2>
+
+  <p>
+    I'm not asking you to forget everything
+    or pretend that nothing happened.
+    I just want you to know that I'm genuinely sorry.
+  </p>
+
+  <p>
+    I can't change the past, but I can work on myself
+    and show you through my actions that I mean
+    what I'm saying.
+  </p>
+
+  <button onclick="reveal()">Read This, Sai ❤️</button>
+
+  <div id="finalMessage">
+    <strong class="glow">Sai, I'm really sorry, bestie. ❤️</strong>
+    <br><br>
+
+    You are so special to me, and I never want my
+    emotions to become a reason for you to feel
+    pressured or uncomfortable.
+    <br><br>
+
+    I just want my best friend back, and I want us
+    to rebuild our beautiful bond with understanding,
+    trust, and happiness.
+    <br><br>
+
+    I'll do my part to change and become better.
+    I'll respect your feelings and give you the space
+    you need.
+    <br><br>
+
+    <span class="glow">
+      I miss you, bestie. 🥺❤️
+    </span>
+  </div>
+</section>
+
+<!-- SECTION 6: A GENTLE QUESTION -->
+<section class="fade">
+  <h2 class="glow">Sai, Can We Be Okay Again? 🥺</h2>
+
+  <p>
+    I miss my best friend. I hope that, whenever
+    you're ready, we can slowly find our way back
+    to the beautiful friendship we had.
+  </p>
+
+  <p>
+    No pressure, bestie. Your feelings matter to me too. 🤍
+  </p>
+
+  <div>
+    <button onclick="yes()">Let's Try Again ❤️</button>
+    <button class="secondary" onclick="nope()">I Need Some Time 🤍</button>
+  </div>
+
+  <div id="reply"></div>
+</section>
+
+<!-- SECTION 7: ENDING -->
+<section class="fade">
+  <div class="big-heart">❤️🫂</div>
+
+  <h2>Thank You for Being You, Sai.</h2>
+
+  <p>
+    Thank you for being my best friend and for all
+    the beautiful memories we've shared.
+  </p>
+
+  <p>
+    No matter how things feel right now, I genuinely
+    wish you happiness, peace, and all the good
+    things you deserve.
+  </p>
+
+  <p>
+    <strong class="glow">
+      You're not just my friend; you're someone
+      who means a lot to my heart. ❤️
+    </strong>
+  </p>
+
+  <small>
+    Made with love, a sincere apology, and lots of hope. 🌙
+  </small>
+</section>
+
+<script>
+const text =
+  "I don't want my emotions to hurt our friendship. I just want to make things right. ❤️";
+
+let i = 0;
+
+function type(){
+  if(i < text.length){
+    document.getElementById("typing").textContent += text[i++];
+    setTimeout(type, 45);
+  }
+}
+
+type();
+
+function nextSection(){
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+}
+
+const sections = document.querySelectorAll(".fade");
+
+function revealSections(){
+  sections.forEach(s => {
+    if(s.getBoundingClientRect().top < window.innerHeight - 100){
+      s.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+revealSections();
+
+function reveal(){
+  document.getElementById("finalMessage").style.display = "block";
+  burst();
+}
+
+function yes(){
+  const reply = document.getElementById("reply");
+  reply.style.display = "block";
+  reply.textContent =
+    "🥹❤️ Thank you for being willing to try, Sai. Our friendship means so much to me. I'll do my best to show you through my actions. 🫂";
+  burst();
+}
+
+function nope(){
+  const reply = document.getElementById("reply");
+  reply.style.display = "block";
+  reply.textContent =
+    "It's okay, Sai. 🤍 Take the time and space you need. I respect your feelings, and I'm truly sorry for hurting you. I'll be here if and when you're ready.";
+}
+
+function burst(){
+  for(let i = 0; i < 30; i++){
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.textContent = ["❤️","💖","💕","🥺","🌸","🫶"][
+      Math.floor(Math.random() * 6)
+    ];
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (18 + Math.random() * 25) + "px";
+    h.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6500);
+  }
+}
+
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.textContent = "❤️";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = (14 + Math.random() * 18) + "px";
+
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 6000);
+}, 700);
+</script>
+
+</body>
+</html>
